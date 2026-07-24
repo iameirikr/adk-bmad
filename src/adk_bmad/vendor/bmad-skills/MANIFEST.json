@@ -1,0 +1,16 @@
+{
+  "source": "https://github.com/bmad-code-org/BMAD-METHOD",
+  "license": "MIT",
+  "vendored_from": "a live BMAD-METHOD BMM v6.8.0 project install (.claude/skills/)",
+  "bmm_version": "6.8.0",
+  "note": "This is a fallback copy used only when the target project doesn't have BMAD-METHOD's skills installed under .claude/skills, .agents/skills, or .codex/skills (see src/adk_bmad/skills.py) — e.g. the bundled examples/sample-bmad-project. Refresh with scripts/sync_bmad_skills.py. When running against a real BMAD-METHOD project, its own installed (and possibly newer) skill files are used instead — see NOTICE.",
+  "skills": [
+    "bmad-create-story",
+    "bmad-dev-story",
+    "bmad-code-review",
+    "bmad-review-adversarial-general",
+    "bmad-review-edge-case-hunter",
+    "bmad-qa-generate-e2e-tests",
+    "bmad-retrospective"
+  ]
+}

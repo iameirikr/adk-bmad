@@ -1,0 +1,41 @@
+adk-bmad
+Copyright (c) 2026 Eirikr
+
+This project is licensed under the MIT License (see LICENSE).
+
+================================================================================
+
+This project builds on and credits two upstream projects:
+
+1. BMAD-METHOD
+   https://github.com/bmad-code-org/BMAD-METHOD
+   Copyright (c) BMAD
+   Licensed under the MIT License.
+
+   adk-bmad does not reimplement BMAD-METHOD's agent instructions. Instead,
+   `src/adk_bmad/skills.py` loads the real upstream "skill" files (SKILL.md,
+   steps/*.md, checklist.md, template.md) at runtime — either from a BMAD-METHOD
+   project you point it at, or from the vendored fallback copy under
+   `src/adk_bmad/vendor/bmad-skills/`, kept in sync via `scripts/sync_bmad_skills.py`.
+   See `src/adk_bmad/vendor/bmad-skills/MANIFEST.json` for exactly which upstream
+   version is vendored, and `docs/bmad-compatibility.md` for the schema this
+   project depends on (sprint-status.yaml, story file format, etc.).
+
+   adk-bmad's own workflow orchestration (the ADK agent graph, tools, callbacks,
+   and the parallel adversarial-review gate) is original work — only the BMAD
+   domain instructions are sourced from upstream.
+
+2. Google Agent Development Kit (ADK)
+   https://github.com/google/adk-python
+   Copyright (c) Google LLC
+   Licensed under the Apache License, Version 2.0.
+
+   adk-bmad is built on the `google-adk` Python package and depends on it at
+   runtime; it is not affiliated with or endorsed by Google.
+
+================================================================================
+
+adk-bmad is a sibling project to `archon-bmad` (https://github.com/iameirikr/archon-bmad,
+same author), which ports the same BMAD implementation loop onto the Archon
+workflow engine. The two are independent implementations of the same idea on
+different runtimes.

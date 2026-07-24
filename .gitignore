@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+build/
+dist/
+
+# uv
+.python-version.local
+
+# Env / secrets
+.env
+.env.*
+!.env.example
+
+# ADK runtime artifacts
+.adk/
+*.session.json
+
+# examples/sample-bmad-project is bootstrapped into its own git repo on first
+# run (see agents/_context.py::_ensure_git_repo) and accumulates the demo app
+# code (tinytodo.py, todos.json, ...) the loop writes there — none of that is
+# part of adk-bmad itself.
+examples/sample-bmad-project/.git/
+examples/sample-bmad-project/tinytodo.py
+examples/sample-bmad-project/test_tinytodo.py
+examples/sample-bmad-project/todos.json
+
+# Editors / OS
+.DS_Store
+.vscode/
+.idea/
+
+# Test/eval output
+.pytest_cache/
+.ruff_cache/
+htmlcov/
+.coverage
+
+# Claude Code local settings (not part of the published project)
+.claude/
